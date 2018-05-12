@@ -1,6 +1,6 @@
 import React from 'react';
-
-const SignOut = ({onRouteChange, isSignedIn})=>{
+//return the navigation bar and check whether the user is signedIn
+const NavigationBar = ({onRouteChange, isSignedIn})=>{
 		if(isSignedIn){
 			return(
 			<nav style={{display: 'flex', justifyContent: 'flex-end'}}>
@@ -18,4 +18,4 @@ const SignOut = ({onRouteChange, isSignedIn})=>{
 		}
 }
 
-export default SignOut;
+export default NavigationBar;

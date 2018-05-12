@@ -2,7 +2,8 @@ import React from 'react';
 import Tilt from 'react-tilt';
 import './Logo.css'
 import robot from './robot.png';
-
+//return the logo with the animation
+//code used from https://www.npmjs.com/package/react-tilt
 const Logo = ()=>{
 	return (
 		<div className='ma4 mt0'>

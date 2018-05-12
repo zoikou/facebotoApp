@@ -2,7 +2,7 @@ import React from 'react';
 import soundOn from './speaker.png';
 import soundOff from './speakeroff.png';
 
-
+// return the sound button element
 const SoundButton = ({handleSong, playing})=>{
 
   if(playing){

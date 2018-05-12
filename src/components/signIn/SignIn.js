@@ -1,6 +1,5 @@
-//Code used from http://tachyons.io/components/forms/sign-in/index.html
 import React from 'react';
-//smart component signIn with state to keep track of the imput
+//smart component signIn with state to keep track of the inputs
 class SignIn extends React.Component{
 	constructor(props){
 		super();
@@ -9,13 +8,17 @@ class SignIn extends React.Component{
 			signInPassword: ''
 		}
 	}
+	//Update the state of the signInEmail variable
 	emailInput = (event)=>{
        this.setState({signInEmail : event.target.value})
 	}
+	//Update the state of the signInPassword variable
 	passwordInput = (event)=>{
 		this.setState({signInPassword: event.target.value})
 	}
+	//Submit signIn form
     submitSignIn = ()=>{
+    	//invoke a call to the server to validate the data with the database
     	fetch('https://fathomless-journey-21104.herokuapp.com/signin', {
     		method: 'post',
     		headers: {'Content-Type' : 'application/json'},
@@ -26,6 +29,7 @@ class SignIn extends React.Component{
     	})
     	  .then(response => response.json())
     	  .then(user => {
+    	  	//if the response includes an id then load the user and change the route to home
     	  	if(user.id){
     	  		this.props.loadUser(user);
     	  		this.props.onRouteChange('home');
@@ -33,7 +37,8 @@ class SignIn extends React.Component{
     	  })
     	
     }
-
+    //Code used from http://tachyons.io/components/forms/sign-in/index.html
+    //render the signIn form
 	render(){
 		const {onRouteChange} = this.props;
 		return (

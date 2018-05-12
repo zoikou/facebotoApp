@@ -1,7 +1,7 @@
 import React from 'react';
 import './ImageLinkForm.css';
 
-
+//return the link form for the image detection
 const ImageLinkForm = ({changeInputState, onPictureSubmit})=>{
 	return (
 		<div>

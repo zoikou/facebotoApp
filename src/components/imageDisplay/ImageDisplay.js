@@ -1,7 +1,7 @@
 import React from 'react';
 import './ImageDisplay.css';
 
-
+// return the image submitted in the imageLinkForm with the face box
 const ImageDisplay = ({imageUrl,box})=>{
 	return (
 		<div className='center ma'>
